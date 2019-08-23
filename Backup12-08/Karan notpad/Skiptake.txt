@@ -1,0 +1,15 @@
+Skip take
+Controllerr
+$skip = $request->skip;
+        $view = $this->projectStatusRepository->GetViewMore($skip);
+        return $view;
+		
+		
+Repository
+   public function GetViewMore($skip)
+    {
+
+        $ViewMore = $this->model->skip($skip)->take(5)->get();
+        return $ViewMore;
+
+    }

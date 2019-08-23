@@ -1,0 +1,15 @@
+ng generate component [component-name]
+
+ng g route [route-name]
+
+ng g service [name]
+
+ng g class [name]
+
+Folder add module
+
+ng g module 'name'
+
+
+ng if  = The Boolean expression to evaluate as the condition for showing a template.
+
