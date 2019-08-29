@@ -1,0 +1,18 @@
+<h1 style="margin-left: 650px; color: crimson">Login form</h1><br>
+<div class="col-sm-3" style="margin-left: 550px;">
+  <form [formGroup]="loginform"  name="loginform" novalidate (ngSubmit)="savelogin()">
+
+    <input type="text" placeholder="Enter Email" class="form-control" formControlName="email" name="email" [(ngModel)]="User.email"><br>
+  <span *ngIf="loginform.get('email').touched && loginform.hasError('required',['email'])" >Email filed is required</span>
+
+    <input type="password" placeholder="password" class="form-control" formControlName="password" name="password" [(ngModel)]="User.password"><br>
+    <span *ngIf="loginform.get('password').touched && loginform.hasError('required',['password'])" >password filed is required</span>
+    <div align="center">
+      <button type="submit" class="btn btn-default" [disabled]="loginform.invalid">Login</button>&nbsp;&nbsp;
+
+
+      <a [routerLink]="['/register']" class="btn btn-default">Registration</a>&nbsp;&nbsp;
+      <a [routerLink]="['/view']" class="btn btn-primary">View Page</a></div>
+    <a [routerLink]="['/home']" class="btn btn-default">Home</a>
+  </form>
+</div>
